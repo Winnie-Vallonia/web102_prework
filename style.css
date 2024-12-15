@@ -21,6 +21,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -72,4 +79,36 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+/* Style for the search bar container */
+#search-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin: 20px 0;          
+}
+
+/* Style for the search input */
+#search-bar {
+    width: 100%; /* Makes the input take up 100% of the container's width */
+    max-width: 500px; /* Limits the max width */
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Add some style for when user is typing */
+#search-bar:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+#game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
